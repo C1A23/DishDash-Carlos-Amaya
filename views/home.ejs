@@ -1,0 +1,52 @@
+<div class="content">
+    <img class="mealpreps" src="/images/mealpreps.png" alt="Meal Preps">
+    <div class="text-container">
+        <div class="overlay">Canada's #1 Food<br>Delivery!</div>
+        <p class="description">We guarantee that with our services you will find not<br> only your appetite quenched but your soul fulfilled.</p>
+        <a href="/"><h1 class="getStarted">Start Now</h1></a>
+    </div>
+</div>
+
+<div>
+    <div class="contentHeader">
+        <h2 id="magic-happens">HOW THE MAGIC HAPPENS</h2>
+        <a href="https://www.youtube.com/watch?v=Olye1M0AwV4" target="_blank"><button class="videoButton">Watch the video!</button></a>
+    </div>
+
+    <div class="contentContainer">
+        <div class="contentObject">
+            <img src="/images/ingredients.png" alt="An overhead view of the ingredients being used to cook">
+            <h3>We give you only the best of the best.</h3>
+            <p>Our team of trained professionals uses only the highest quality ingredients whilst producing your order.</p>
+        </div>
+
+        <div class="contentObject">
+            <img src="/images/browsing.png" alt="Person browsing their computer for food delivery options">
+            <h3>Countless options offered on our website.</h3>
+            <p>Over 100 different dishes to choose from, we guarantee you will find an option that will leave your mouth watering.</p>
+        </div>
+
+        <div class="contentObject">
+            <img src="/images/delivery.png" alt="Food delivery being handed off">
+            <h3>You pick the date and we are there.</h3>
+            <p>Our delivery arrives on the date you pick and is free of charge, if any food is damaged its on us!.</p>
+        </div>
+
+        <div class="contentObject">
+            <img src="/images/eating.png" alt="Man happy eating his delicious food">
+            <h3>The results will leave you in awe.</h3>
+            <p>Our high protein meals are bound to make your muscles grow making you feel like you can take on the world.</p>
+        </div>
+        </div>
+    </div>
+</div>
+
+<h1 id="featured-meals" class="featuredMeals">FEATURED MEALS</h1>
+
+<div class="featuredMealsContainer">
+    <% featuredMeals.forEach(meal => { %>
+        <%- include('partials/mealkit', { meal: meal }) %>
+    <% }) %>
+</div>
+
+

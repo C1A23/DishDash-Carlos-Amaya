@@ -1,0 +1,12 @@
+<div class="container">
+    <% categories.forEach(category => { %>
+        <h2 class="category-title"><%= category.categoryName %></h2>
+        <div class="mealkit-grid">
+            <% category.mealKits.forEach(meal => { %>
+                <div class="mealkit-card">
+                    <%- include('partials/mealkit', { meal: meal }) %>
+                </div>
+            <% }) %>
+        </div>
+    <% }) %>
+</div>

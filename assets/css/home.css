@@ -1,0 +1,372 @@
+.header {
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    background-color: #E63946;
+    font-size: 30px;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    max-width: 300px; 
+    width: 15%; 
+    height: auto;
+    left: 10%;
+    top: 20%;
+    transform: translateX(-50%); 
+    z-index: 10
+}
+
+.mealpreps {
+    width: 100%;
+    height: auto;
+}
+
+.content{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.text-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.overlay {
+    font-weight: bold;
+    font-size: 5vw;
+    margin: 0;
+}
+
+.description {
+    font-weight: lighter;
+    font-size: 1.5vw;
+    margin: 0;
+}
+
+.getStarted {
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    padding: 1vw, 2vw;
+    font-size: 1.5vw;
+    background-color: #e63947;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.getStarted:hover {
+    background-color: #c2303c;
+    font-size: 25px;
+}
+
+.NavBar ul {
+    list-style-type: none;
+    background-color: #b52d38;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.NavBar a {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.logo:hover{
+    width: 14%;
+    height: auto;
+}
+
+.NavBar a:hover {
+    background-color: rgb(183, 0, 0);
+}
+
+.NavBar li {
+    float: right;
+}
+
+.contentHeader{
+    padding-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #9a2932;
+    color: white;
+    font-size: 30px;
+}
+
+.contentContainer{
+    background-color: #E63946;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contentObject{
+    border-radius: 30px;
+    width: 20%;
+    margin: 10px;
+    text-align: center;
+    background-color: #992730;
+    padding: 18px;
+    border: 2px solid #761c25;
+}
+
+.contentObject img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.contentObject h3 {
+    margin: 5px 0;
+    font-size: 25px;
+}
+
+.contentObject p {
+    font-weight: lighter;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.videoButton {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: white;
+    color: #E63946;
+    border: none;
+    border-radius: 5px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.featuredMeals{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 60px;
+    text-align: center;
+    background-color: #921b25;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.featuredMealsContainer{
+    background-color: #be2f3b;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.meal{
+    background: #E63946;
+    border: 1px solid #5e171d;
+    border-radius: 8px;
+    width: 550px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.meal h2{
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 10px;
+    color: white;
+    background-color: #c43440;
+    padding: 5px;
+}
+
+.meal p{
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+    color: white;
+}
+
+.meal img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.price{
+    background-color: #711d24;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.body{
+    margin: 0px;
+}
+
+.footer {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ff4050;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.social-media-links {
+    margin-top: 10px;
+}
+
+.category-container {
+    margin-bottom: 2rem;
+}
+
+.category-title{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.mealkit-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem; 
+    margin-left: 60px;
+}
+
+
+
+.mealkit-card {
+    flex: 1 1 300px; 
+    margin-bottom: 1rem; 
+    text-align: center;
+    box-sizing: border;
+}
+
+
+@media (max-width: 767px) {
+    .mealkit-card {
+        flex: 1 1 100%; 
+        max-width: 100%;
+    }
+}
+
+.registration-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 64px;
+  }
+  
+  .registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+  }
+  
+  .form-group label {
+    text-align: left;
+  }
+  
+  .form-group input {
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+  }
+  
+  .register-button {
+    padding: 10px 20px;
+    background-color: #E63946; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .register-button:hover {
+    background-color: #C53030; 
+  }
+  
+  .login-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 204px;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+  }
+  
+  .form-group label {
+    text-align: left;
+  }
+  
+  .form-group input {
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+  }
+  
+  .login-button {
+    padding: 10px 20px;
+    background-color: #E63946; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .login-button:hover {
+    background-color: #C53030; 
+  }
+  
+
