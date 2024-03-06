@@ -98,7 +98,7 @@ app.post("/sign-up", (req, res) => {
             data: req.body
         });
     } else{
-        res.send("Thank you!")
+        res.redirect("/welcome")
     }
 
 });
@@ -137,6 +137,13 @@ app.post("/log-in", (req, res) => {
         res.send("Log in succesful!");
     }
 });
+
+app.get("/welcome", (req, res) => {
+    res.render("welcome", {
+        title: 'Welcome',
+        layout: 'layouts/main'
+    })
+})
 
 
 // This use() will not allow requests to go beyond it

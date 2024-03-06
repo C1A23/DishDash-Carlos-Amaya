@@ -228,6 +228,7 @@
     text-align: center;
     padding: 20px 0;
     font-size: 14px;
+    flex-shrink: 0;
 }
 
 .footer a {
@@ -289,29 +290,29 @@
     margin-bottom: 64px;
   }
   
-  .registration-form {
+.registration-form {
     display: flex;
     flex-direction: column;
     gap: 10px; 
   }
   
-  .form-group {
+.form-group {
     display: flex;
     flex-direction: column;
     gap: 5px; 
   }
   
-  .form-group label {
+.form-group label {
     text-align: left;
   }
   
-  .form-group input {
+.form-group input {
     padding: 10px;
     border: 1px solid #ccc; 
     border-radius: 5px;
   }
   
-  .register-button {
+.register-button {
     padding: 10px 20px;
     background-color: #E63946; 
     color: white;
@@ -321,11 +322,11 @@
     margin-top: 20px;
   }
   
-  .register-button:hover {
+.register-button:hover {
     background-color: #C53030; 
   }
   
-  .login-container {
+.login-container {
     max-width: 400px;
     margin: auto;
     padding: 20px;
@@ -333,29 +334,29 @@
     margin-bottom: 204px;
   }
   
-  .login-form {
+.login-form {
     display: flex;
     flex-direction: column;
     gap: 10px; 
   }
   
-  .form-group {
+.form-group {
     display: flex;
     flex-direction: column;
     gap: 5px; 
   }
   
-  .form-group label {
+.form-group label {
     text-align: left;
   }
   
-  .form-group input {
+.form-group input {
     padding: 10px;
     border: 1px solid #ccc; 
     border-radius: 5px;
   }
   
-  .login-button {
+.login-button {
     padding: 10px 20px;
     background-color: #E63946; 
     color: white;
@@ -365,13 +366,60 @@
     margin-top: 20px;
   }
   
-  .login-button:hover {
+.login-button:hover {
     background-color: #C53030; 
   }
   
-  .error-message {
+.error-message {
     color: #ff0000; 
     font-size: 14px;
     margin-top: 5px;
   }
 
+.welcome-container {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome-container h1 {
+    color: #333;
+}
+
+.welcome-container p {
+    color: #666;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+  }
+  
+.flex-grow {
+    flex-grow: 1;
+  }
+
+.happy{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.welcome{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #E63946;
+}
+
+.welcomeSub{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}

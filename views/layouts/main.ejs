@@ -3,12 +3,13 @@
 <head>
     <title><%= title %></title>
     <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Bebas+Neue?query=beb">
-
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
-<body class="body">
+<body class="flex-container">
     <%- include('../partials/navbar') %>
-    <%- body %>
+    <main class="flex-grow">
+        <%- body %>
+    </main>
     <%- include('../partials/footer') %>
 </body>
 </html>
