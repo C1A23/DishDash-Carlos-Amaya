@@ -56,12 +56,13 @@ app.get("/on-the-menu", (req, res) => {
 //Sign-Up
 app.get("/sign-up", (req, res) => {
     res.render("sign-up", {
-        title: 'Sign Up'
+        title: 'Sign Up',
+        errors: {},
+        data: {}
     });
 });
 
 //Capturing form data for sign up
-
 app.post("/sign-up", (req, res) => {
     console.log(req.body);
 
@@ -105,8 +106,36 @@ app.post("/sign-up", (req, res) => {
 //Log in
 app.get("/log-in", (req, res) => {
     res.render("log-in", {
-        title: 'Log In'
+        title: 'Log In',
+        errors: {},
+        formData: {}
     });
+});
+
+//Same process for the login page
+
+app.post("/log-in", (req, res) => {
+    const { email, password } = req.body;
+
+    let passedValidation = true;
+    let validationMessages = {};
+
+    //checking for null values
+
+    if (!email || !password){
+        passedValidation = false;
+        validationMessages.general = "Email and password are required!"
+    }
+
+    if(!passedValidation){
+        res.render("log-in", {
+            title: 'Log In',
+            errors: validationMessages,
+            formData: { email }
+        });
+    } else {
+        res.send("Log in succesful!");
+    }
 });
 
 
