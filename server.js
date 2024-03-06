@@ -24,6 +24,9 @@ app.set("view engine", "ejs");
 app.set("layout", "layouts/main");
 app.use(expressLayouts);
 
+//Setting up body parser
+app.use(express.urlencoded({ extended: false }));
+
 //Home Route
 app.get("/", (req, res) => {
     // Fetching featured meal kits
@@ -55,6 +58,48 @@ app.get("/sign-up", (req, res) => {
     res.render("sign-up", {
         title: 'Sign Up'
     });
+});
+
+//Capturing form data for sign up
+
+app.post("/sign-up", (req, res) => {
+    console.log(req.body);
+
+    const { firstName, lastName, email, password } = req.body;
+
+    let passedValidation = true;
+    let validationMessages = {};
+
+    //first checking for null values
+    if (!firstName || !lastName || !email || !password){
+        passedValidation = false;
+        validationMessages.general = "All fields are required!"
+    }
+
+    //email verification using regular expression
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)){
+        passedValidation = false;
+        validationMessages.email = "Invalid email format!"
+    }
+
+    //password verification using regular expression
+    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,12}$/;
+    if(!passwordRegex.test(password)){
+        passedValidation = false;
+        validationMessages.password = "Password must be 8-12 characters and include at least one lowercase letter, one uppercase letter, one number, and one symbol!"
+    }
+    
+    if(!passedValidation){
+        res.render("sign-up", {
+            title: 'Sign Up',
+            errors: validationMessages,
+            data: req.body
+        });
+    } else{
+        res.send("Thank you!")
+    }
+
 });
 
 //Log in
