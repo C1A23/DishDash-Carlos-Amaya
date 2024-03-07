@@ -1,7 +1,7 @@
 {
-  "name": "assignment-1",
+  "name": "assignment-3",
   "version": "1.0.0",
-  "description": "This is my assignment 1 in which I am coding a web page for food deliveries",
+  "description": "Assignment 3, form validations and sendGrid",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,6 +16,8 @@
   "author": "Carlos Andres Amaya Rengifo",
   "license": "ISC",
   "dependencies": {
+    "@sendgrid/mail": "^8.1.1",
+    "dotenv": "^16.4.5",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-ejs-layouts": "^2.5.1"

@@ -10,6 +10,11 @@
 *
 **************************************************************************************/
 
+//Setting up dotenv
+
+const dotenv = require("dotenv");
+dotenv.config({ path: "./config/keys.env" });
+
 const path = require("path");
 const express = require("express");
 const app = express();
@@ -98,9 +103,29 @@ app.post("/sign-up", (req, res) => {
             data: req.body
         });
     } else{
-        res.redirect("/welcome")
-    }
+        const sgMail = require("@sendgrid/mail");
+        sgMail.setApiKey(process.env.SEND_GRID_API_KEY);
+            //the email is being sent but it is being sent to spam in case you can't see it
+        const msg = {
+            to: email,
+            from: "carlosam854@gmail.com",
+            subject: "Congratulations on becoming a part of the DishDash family!",
+            text: `Hello ${firstName} ${lastName},\n\nWelcome to DishDash! We're thrilled to have you on board. Enjoy exploring our vast selection of meal kits.\n\nBest Regards,\nCarlos Amaya\nDishDash`
+        };
 
+        sgMail.send(msg)
+            .then(() => {
+                res.redirect("/welcome")
+            })
+            .catch(err => {
+                console.log(err);
+                res.render("sign-up", {
+                    title: 'Sign Up',
+                    errors: validationMessages,
+                    data: req.body
+                })
+            })
+    }
 });
 
 //Log in
