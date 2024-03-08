@@ -11,4 +11,5 @@ Course/Section: WEB322/NAA
 ## Project URLs
 GitHub Repo   : https://github.com/<web322-camaya-rengifo>/
 GitHub Link   : https://github.com/C1A23/web322-camaya-rengifo
-Cyclic URL    : https://<app_name>.cyclic.app/
+Cyclic URL    : https://difficult-handbag-toad.cyclic.app
+
