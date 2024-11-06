@@ -1,15 +1,6 @@
-# WEB322 Project (Winter 2024)
+# Project (Winter 2024)
 
-I declare that this assignment is my own work in accordance with the Seneca Academic Policy.
-No part of this assignment has been copied manually or electronically from any other source
-(including web sites) or distributed to other students.
+Hello! Welcome to my DishDash website, it was a personal project built using Node.js with many additional functionalities such as adding MongoDB for a database connection, a mealkit plus user database with detailed information plus encrypted passwords, both back and front ends were fully developed by me.
 
-Student Name  : Carlos Amaya
-Student Email : camaya-rengifo@myseneca.ca
-Course/Section: WEB322/NAA
 
-## Project URLs
-GitHub Repo   : https://github.com/<web322-camaya-rengifo>/
-GitHub Link   : https://github.com/C1A23/web322-camaya-rengifo
-Cyclic URL    : https://difficult-handbag-toad.cyclic.app
 
